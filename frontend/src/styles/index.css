@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-hawkins-black text-crt-green font-retro;
+    overflow-x: hidden;
+  }
+  
+  * {
+    @apply font-retro;
+  }
+}
+
+@layer utilities {
+  /* CRT Monitor Effect */
+  .crt-screen {
+    position: relative;
+    background: #0a0a0a;
+  }
+  
+  .crt-screen::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      transparent 50%,
+      rgba(0, 255, 65, 0.03) 50%
+    );
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 1000;
+    animation: scanline 8s linear infinite;
+  }
+  
+  .crt-screen::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      ellipse at center,
+      transparent 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+    pointer-events: none;
+    z-index: 999;
+  }
+  
+  /* Neon Glow Effects */
+  .neon-red {
+    text-shadow: 
+      0 0 5px #ff073a,
+      0 0 10px #ff073a,
+      0 0 15px #ff073a,
+      0 0 20px #ff073a;
+  }
+  
+  .neon-green {
+    text-shadow: 
+      0 0 5px #00ff41,
+      0 0 10px #00ff41,
+      0 0 15px #00ff41,
+      0 0 20px #00ff41;
+  }
+  
+  .neon-box-red {
+    box-shadow: 
+      0 0 5px #ff073a,
+      0 0 10px #ff073a,
+      0 0 15px #ff073a,
+      inset 0 0 5px #ff073a;
+  }
+  
+  .neon-box-green {
+    box-shadow: 
+      0 0 5px #00ff41,
+      0 0 10px #00ff41,
+      0 0 15px #00ff41,
+      inset 0 0 5px #00ff41;
+  }
+  
+  /* Flicker Animation */
+  .flicker {
+    animation: flicker 0.15s infinite;
+  }
+  
+  /* Terminal Style */
+  .terminal {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #00ff41;
+    font-family: 'VT323', 'Courier New', monospace;
+  }
+  
+  /* Retro Button */
+  .retro-button {
+    @apply px-4 py-2 border-2 border-crt-green bg-transparent text-crt-green;
+    @apply hover:bg-crt-green hover:text-hawkins-black;
+    @apply transition-all duration-200;
+    @apply font-retro text-xl;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .retro-button:hover {
+    box-shadow: 0 0 10px #00ff41;
+  }
+}
+
