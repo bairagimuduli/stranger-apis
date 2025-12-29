@@ -1,5 +1,5 @@
 function QuickActions({ gateOpen, energySpikes }) {
-  const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+  const apiUrl = import.meta.env.VITE_API_URL || 'https://stranger-api-backend.onrender.com';
 
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
@@ -75,7 +75,7 @@ function QuickActions({ gateOpen, energySpikes }) {
 
         <div className="mt-4 p-2 bg-hawkins-dark border border-crt-green/30">
           <p className="text-xs text-crt-green-dark">
-            💡 Use Swagger UI for interactive testing: <a href="http://localhost:3000/docs" target="_blank" rel="noopener noreferrer" className="text-crt-green underline">/docs</a>
+            💡 Use Swagger UI for interactive testing: <a href={`${apiUrl}/docs`} target="_blank" rel="noopener noreferrer" className="text-crt-green underline">/docs</a>
           </p>
         </div>
       </div>

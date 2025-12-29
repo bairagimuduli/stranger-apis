@@ -17,7 +17,7 @@ function GettingStarted({ onClose }) {
         <div>
           <h3 className="text-xl text-crt-green mb-2">📚 Step 1: View API Documentation</h3>
           <p className="text-crt-green-dark mb-2">
-            Open <a href="http://localhost:3000/docs" target="_blank" rel="noopener noreferrer" className="text-crt-green underline hover:neon-green">Swagger UI</a> in a new tab to see all available endpoints.
+            Open <a href={`${import.meta.env.VITE_API_URL || 'https://stranger-api-backend.onrender.com'}/docs`} target="_blank" rel="noopener noreferrer" className="text-crt-green underline hover:neon-green">Swagger UI</a> in a new tab to see all available endpoints.
           </p>
         </div>
 

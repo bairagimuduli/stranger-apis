@@ -42,8 +42,8 @@ npm install
 npm run dev
 ```
 
-API available at `http://localhost:3000`
-- Swagger Docs: `http://localhost:3000/docs`
+API available at `http://localhost:3000` (local) or `https://stranger-api-backend.onrender.com` (production)
+- Swagger Docs: `http://localhost:3000/docs` (local) or `https://stranger-api-backend.onrender.com/docs` (production)
 
 ### Frontend
 
@@ -133,6 +133,7 @@ X_HAWKINS_LAB_ID=LAB-001
 ### Frontend (.env)
 ```
 VITE_API_URL=http://localhost:3000
+# Production: VITE_API_URL=https://stranger-api-backend.onrender.com
 ```
 
 ## 📝 Notes

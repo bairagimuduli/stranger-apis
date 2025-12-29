@@ -139,6 +139,9 @@ app.use((err, req, res, next) => {
 const server = app.listen(PORT, () => {
   console.log(`🚀 Hawkins Lab API is running on port ${PORT}`);
   console.log(`📚 API Documentation available at http://localhost:${PORT}/docs`);
+  if (process.env.RENDER_EXTERNAL_URL) {
+    console.log(`🌐 Production URL: ${process.env.RENDER_EXTERNAL_URL}/docs`);
+  }
   console.log(`🔐 Default credentials: ${process.env.USERNAME || 'admin'} / ${process.env.PASSWORD || 'stranger123'}`);
 });
 

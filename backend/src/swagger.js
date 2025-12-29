@@ -29,7 +29,7 @@ const options = {
     },
     servers: [
       {
-        url: process.env.API_URL || 'http://localhost:3000',
+        url: process.env.API_URL || 'https://stranger-api-backend.onrender.com',
         description: 'Development server',
       },
     ],

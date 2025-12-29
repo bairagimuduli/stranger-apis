@@ -104,7 +104,7 @@ function Dashboard() {
               Real-time monitoring of the Upside Down
             </span>
             <a
-              href="http://localhost:3000/docs"
+              href={`${import.meta.env.VITE_API_URL || 'https://stranger-api-backend.onrender.com'}/docs`}
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-crt-green hover:neon-green underline"
